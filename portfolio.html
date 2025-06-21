@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Himanshu's Portfolio</title>
+  
+  <style>
+    header {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #2c3e50, #000);
+  box-shadow: 0 4px 10px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#animated-name {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+#animated-name span {
+  display: inline-block;
+  font-size: 3rem;
+  color: #00ffe7;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: glowFade 0.6s ease forwards;
+}
+
+#animated-name span:nth-child(1) { animation-delay: 0s; }
+#animated-name span:nth-child(2) { animation-delay: 0.1s; }
+#animated-name span:nth-child(3) { animation-delay: 0.2s; }
+#animated-name span:nth-child(4) { animation-delay: 0.3s; }
+#animated-name span:nth-child(5) { animation-delay: 0.4s; }
+#animated-name span:nth-child(6) { animation-delay: 0.5s; }
+#animated-name span:nth-child(7) { animation-delay: 0.6s; }
+#animated-name span:nth-child(8) { animation-delay: 0.7s; }
+
+@keyframes glowFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 15px #00ffe7, 0 0 30px #00ffe7;
+  }
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, #2c3e50, #000);
+      box-shadow: 0 4px 10px #000;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      color: #00ffe7;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #aaa;
+    }
+
+    section {
+      padding: 3rem 10vw;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 2rem 0;
+      transform-style: preserve-3d;
+      transition: transform 0.3s ease;
+      box-shadow: 0 15px 30px rgba(0, 255, 200, 0.2);
+    }
+
+    .card:hover {
+      transform: perspective(1000px) rotateY(10deg) rotateX(5deg);
+    }
+
+    h2 {
+      color: #00ffe7;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #00ffe7;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      list-style: none;
+      line-height: 1.8;
+    }
+
+    .projects .card {
+      transition: 0.5s;
+    }
+
+    .projects .card:hover {
+      box-shadow: 0 0 20px #00ffe7;
+    }
+
+    footer {
+      background: #111;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 2rem 5vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="animated-name">
+      <span>H</span><span>I</span><span>M</span><span>A</span><span>N</span><span>S</span><span>H</span><span>U</span>
+    </h1>
+    <p>Mathematics & Computing | BHU | Python • AI/ML • Web Dev</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I am a postgraduate in Mathematics and Computing from Banaras Hindu University, with interests in AI/ML, Web Development, and Data Analytics. Passionate about solving real-world problems using modern tech stacks.</p>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Languages:</strong> Python, C, MATLAB, HTML, CSS, JavaScript</li>
+        <li><strong>Libraries:</strong> Pandas, NumPy, Scikit-learn, OpenCV, TensorFlow</li>
+        <li><strong>Tools:</strong> MySQL, PHP, Git, Excel</li>
+        <li><strong>Concepts:</strong> DSA, Mathematical Modeling, Numerical Methods</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="card">
+      <h3>Real-Time Emotion Detection</h3>
+      <p>Used Python, OpenCV & TensorFlow to detect facial emotions live with high accuracy.</p>
+    </div>
+    <div class="card">
+      <h3>E-Commerce Website</h3>
+      <p>Developed a full-stack shopping site with HTML, CSS, JS, PHP & MySQL.</p>
+    </div>
+    <div class="card">
+      <h3>Student Performance Prediction</h3>
+      <p>Applied ML models on student data using Python & Scikit-learn to predict academic success.</p>
+    </div>
+    <div class="card">
+      <h3>Sales Data Trend Analysis</h3>
+      <p>Exploratory Data Analysis using Pandas, Seaborn, Matplotlib to uncover insights.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="card">
+      <p><strong>M.Sc. Mathematics and Computing</strong> — Banaras Hindu University (2021–2023)<br/>
+        Dissertation: Real-Time Emotion Detection System under Dr. Awadhesh Kumar</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Achievements</h2>
+    <div class="card">
+      <ul>
+        <li>Qualified IIT-JEE (Mains)</li> 
+          <li>  IIT-JAM (Mathematics)</li>
+        <li>GATE 2024   – CS & IT</li>
+        <li>One Year Member of ACM (1 year)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="card">
+      <ul>
+        <li>Email: himanshukumarbhu86@gmail.com</li>
+        <li>Phone: 6307267680</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/himanshu-386175241" style="color: #00ffe7;">himanshu</a></li>
+        <li>Location: Uttar Pradesh, India</li>
+      </ul>
+<h2></h2>
+      <a href="https://www.hackerrank.com/himanshu_xyz" target="_blank"
+   style="background: #00ffe7; color: #000; padding: 1rem 2rem;
+          border-radius: 12px; font-size: 1.2rem;
+          text-decoration: none; font-weight: bold;
+          display: inline-block; margin-top: 1rem;
+          box-shadow: 0 0 20px #00ffe7, 0 0 40px #00ffe7;
+          transition: all 0.3s ease;">
+  ✅ View My Verified Skills on HackerRank
+</a>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Himanshu | All rights reserved.
+  </footer>
+
+</body>
+</html>
